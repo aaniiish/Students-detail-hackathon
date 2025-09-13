@@ -1,0 +1,218 @@
+/* General Layout */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: Inter, "Noto Sans", sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* Header */
+.profile-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(248, 250, 252, 0.8);
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  backdrop-filter: blur(5px);
+}
+
+.profile-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  flex: 1;
+  text-align: center;
+  padding-right: 2.5rem;
+}
+
+/* Profile Info */
+.profile-main {
+  padding: 1rem;
+}
+
+.profile-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-picture {
+  background-image: url('https://googleusercontent.com/profile/picture/0');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f8fafc;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+}
+
+.user-id, .user-dept {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Common Card Styles */
+.sections-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+/* Contact Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.label {
+  color: #64748b;
+}
+
+.value {
+  color: #1e293b;
+  font-weight: 500;
+  justify-self: end;
+}
+
+/* Academic Boxes */
+.academic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.academic-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.bg-blue { background-color: #eff6ff; }
+.bg-green { background-color: #f0fdf4; }
+.bg-yellow { background-color: #fefce8; }
+
+.academic-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.bg-blue .academic-label { color: #1e40af; }
+.bg-green .academic-label { color: #14532d; }
+.bg-yellow .academic-label { color: #a16207; }
+
+.academic-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.bg-blue .academic-value { color: #1e3a8a; }
+.bg-green .academic-value { color: #166534; }
+.bg-yellow .academic-value { color: #854d0e; }
+
+/* Link Lists */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 0 1rem;
+}
+
+.link-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 400;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.link-item:hover {
+  background-color: #f8fafc;
+}
+
+.link-item + .link-item {
+  border-top: 1px solid #e2e8f0;
+}

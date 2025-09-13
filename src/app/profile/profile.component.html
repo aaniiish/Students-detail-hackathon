@@ -1,0 +1,84 @@
+<div class="profile-container">
+  <div class="main-content">
+    <header class="profile-header">
+      <button class="icon-button" (click)="goBack()">
+        <span class="material-symbols-outlined"> arrow_back </span>
+      </button>
+      <h2 class="profile-title">Profile</h2>
+    </header>
+
+    <main class="profile-main">
+      <div class="profile-info-section">
+        <div class="profile-picture-container">
+          <div class="profile-picture"></div>
+          <button class="edit-button">
+            <span class="material-symbols-outlined"> edit </span>
+          </button>
+        </div>
+        <div class="profile-details">
+          <p class="user-name">Arjun Sharma</p>
+          <p class="user-id">Roll No: 2021CS001</p>
+          <p class="user-dept">Department: Computer Science | Year: 3</p>
+        </div>
+      </div>
+
+      <div class="sections-list">
+        <section class="info-card">
+          <h3 class="card-title">Contact Information</h3>
+          <div class="info-grid">
+            <p class="label">Email</p>
+            <p class="value">arjun.sharma@example.com</p>
+            <p class="label">Phone</p>
+            <p class="value">+91 9876543210</p>
+          </div>
+        </section>
+
+        <section class="info-card">
+          <h3 class="card-title">Digital ID</h3>
+          <div class="digital-id-container">
+            <div class="digital-id-image"></div>
+          </div>
+        </section>
+
+        <section class="info-card">
+          <h3 class="card-title">Academic Snapshot</h3>
+          <div class="academic-grid">
+            <div class="academic-box bg-blue">
+              <p class="academic-label">GPA</p>
+              <p class="academic-value">8.5</p>
+            </div>
+            <div class="academic-box bg-green">
+              <p class="academic-label">Attendance</p>
+              <p class="academic-value">92%</p>
+            </div>
+            <div class="academic-box bg-yellow">
+              <p class="academic-label">Assignments</p>
+              <p class="academic-value">3</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="category-list">
+          <h3 class="category-title">Skills & Achievements</h3>
+          <div class="link-card">
+            <a class="link-item" routerLink="/certifications">
+              <p>Certifications</p>
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </a>
+            <a class="link-item" routerLink="/internships">
+              <p>Internships</p>
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </a>
+            </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <footer class="bottom-nav">
+    <a class="nav-item" routerLink="/dashboard">
+      <span class="material-symbols-outlined"> home </span>
+      <p>Home</p>
+    </a>
+    </footer>
+</div>

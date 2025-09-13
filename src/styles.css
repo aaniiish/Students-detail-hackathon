@@ -1,0 +1,77 @@
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial';
+  color: #2d2d2d;
+}
+
+#splash-screen img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.donate-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.donate-box input {
+  width: 300px;
+  padding: 10px;
+}
+
+.donate-box button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}

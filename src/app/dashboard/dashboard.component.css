@@ -1,0 +1,401 @@
+/* .dashboard-container {
+  background: #f0f4ff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.back-button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  color: #5C67E6;
+}
+
+.user-icon {
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #888;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.search-bar input::placeholder {
+  color: #bbb;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: #5C67E6;
+}
+
+.content-section {
+  margin-bottom: 25px;
+}
+
+.image-card {
+  width: 100%;
+  border-radius: 20px;
+  height: ;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Optional: Add a subtle animation to make the images pop */
+/* .image-card img {
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.02);
+} */ 
+ /* Sidebar Styles */
+ /* General Dashboard Container - no change */
+/* General Dashboard Container - no change */
+/* .dashboard-container { */
+  /* min-height: 100vh;
+  background: #f0f4ff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative; /* Ensure this is set for overlay/sidebar positioning */
+/* } */ 
+
+/* .dashboard-wrapper {
+
+} */
+
+/* Header Navigation - no change */
+/* .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;  */
+
+/* B
+.back-button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #5C67E6;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin: 20px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.image-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* NEW: Full-width image specific styles */
+/* .content-section.full-width-image {
+  padding: 0; /* Remove padding for this specific section */
+  /* margin: 0;
+} */
+
+/* .content-section.full-width-image .image-card { */
+  /* border-radius: 0; /* Make the image card itself sharp corners if you want the image to truly go edge-to-edge */
+  /* box-shadow: none; /* Remove shadow if it's meant to be truly edge-to-edge */
+  /* margin-bottom: 0; /* Remove bottom margin to blend if needed */
+/* } */ 
+
+/* The rest of your existing CSS (sidebar, overlay, etc.) */
+/* (make sure to keep the sidebar, overlay, and main content setup as provided previously for the perfect sliding menu) */ 
+/* General Page Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4ff;
+}
+
+/* Main Dashboard Wrapper */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* Initially off-screen */
+  height: 100vh;
+  width: 280px;
+  /* Use a subtle gradient for a modern feel */
+  background: linear-gradient(180deg, #d2dfff 0%, #e6eaff 100%);
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 100;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.sidebar.open {
+  transform: translateX(280px); /* Slides it into view */
+}
+
+/* Header and Menu Items */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b3b3b;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #5c67e6;
+}
+
+.sub-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.sub-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #6a6a6a;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.sub-menu a:hover {
+  color: #5c67e6;
+  transform: translateX(5px);
+}
+
+.material-symbols-outlined {
+  transition: transform 0.3s ease;
+}
+
+.material-symbols-outlined.rotated {
+  transform: rotate(180deg);
+}
+
+/* Main Content Area */
+.dashboard-wrapper {
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.back-button, .user-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover, .user-icon:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #5c67e6;
+}
+
+.user-icon {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #5c67e6;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  background: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  color: #3b3b3b;
+}
+
+.search-bar input::placeholder {
+  color: #b0b0b0;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #5c67e6;
+}
+
+/* Image Cards */
+.content-wrapper {
+  padding: 0 1rem;
+}
+
+.image-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .dashboard-wrapper {
+    padding: 1rem;
+  }
+}
